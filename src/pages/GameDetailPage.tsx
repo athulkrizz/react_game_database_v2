@@ -5,6 +5,7 @@ import GameAttributes from "../components/GameAttributes";
 import useGame from "../hooks/useGame";
 import GameTrailer from "../components/GameTrailer";
 import GameScreenShots from "../components/GameScreenShots";
+import GameStores from "../components/GameStores";
 
 const GameDetailPage = () => {
   const { slug } = useParams();
@@ -24,6 +25,7 @@ const GameDetailPage = () => {
         <Heading>{game.name}</Heading>
         <ExpandableText>{game.description_raw}</ExpandableText>
         <GameAttributes game={game} />
+        <GameStores gameId={game.id} />
       </GridItem>
       <GridItem>
         <GameTrailer gameId={game.id} />

@@ -23,4 +23,4 @@ const GameScreenShots = ({ gameId }: Props) => {
     )
 }
 
-export default GameScreenShots
+export default GameScreenShots;
