@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Heading,
   HStack,
@@ -27,7 +28,7 @@ const GenreList = () => {
   }
 
   return (
-    <>
+    <Box paddingTop={5}>
       <Heading fontSize="2xl" marginBottom={3}>
         Genres
       </Heading>
@@ -61,7 +62,7 @@ const GenreList = () => {
           </ListItem>
         ))}
       </List>
-    </>
+    </Box>
   );
 };
 
