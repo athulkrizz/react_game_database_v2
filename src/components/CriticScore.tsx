@@ -12,7 +12,7 @@ const CriticScore = ({ score }: Props) => {
       paddingX={2}
       borderRadius="4px"
     >
-      {score}
+      {score || "NA"}
     </Badge>
   );
 };

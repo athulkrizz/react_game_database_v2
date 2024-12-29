@@ -12,22 +12,28 @@ const GameAttributes = ({ game }: Props) => {
         <SimpleGrid columns={2} as="dl">
             <DefinitionItem term="Platforms">
                 {game.parent_platforms?.map(({ platform }) =>
-                    <Text key={platform.id}>{platform.name}</Text>)}
+                    <Text key={platform.id}>{platform.name || "NA"}</Text>)}
             </DefinitionItem>
             <DefinitionItem term="Metascore">
                 <CriticScore score={game.metacritic} />
             </DefinitionItem>
             <DefinitionItem term="Genres">
                 {game.genres.map(genre =>
-                    <Text key={genre.id}>{genre.name}</Text>)}
+                    <Text key={genre.id}>{genre.name || "NA"}</Text>)}
             </DefinitionItem>
             <DefinitionItem term="Publishers">
                 {game.publishers?.map(publisher =>
-                    <Text key={publisher.id}>{publisher.name}</Text>
+                    <Text key={publisher.id}>{publisher.name || 'NA'}</Text>
                 )}
+            </DefinitionItem>
+            <DefinitionItem term="Website">
+                {game.website}
+            </DefinitionItem>
+            <DefinitionItem term="Released">
+                {game.released}
             </DefinitionItem>
         </SimpleGrid>
     )
 }
 
-export default GameAttributes
+export default GameAttributes;  
