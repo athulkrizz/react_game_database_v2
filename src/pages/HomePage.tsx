@@ -1,13 +1,11 @@
-import { Box, Flex, Grid, GridItem, Show, Spinner } from "@chakra-ui/react";
-import GenreList from "../components/GenreList";
+import { Box, Flex, Grid, GridItem, Show } from "@chakra-ui/react";
+import GameGrid from "../components/GameGrid";
 import GameHeading from "../components/GameHeading";
+import GenreList from "../components/GenreList";
 import PlatformSelector from "../components/PlatformSelector";
 import SortSelector from "../components/SortSelector";
-import GameGrid from "../components/GameGrid";
-import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 
 const HomePage = () => {
-  const {user, isLoading, error}= useAuth0();
   return (
     <Grid
       templateAreas={{
@@ -48,8 +46,4 @@ const HomePage = () => {
   );
 };
 
-  export default HomePage;
-
-// export default withAuthenticationRequired(HomePage, {
-//   onRedirecting: () => <Spinner />
-// })
+export default HomePage;

@@ -1,7 +1,6 @@
+import { Box } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import { NavBar } from "../components/NavBar";
-import { Box, Spinner } from "@chakra-ui/react";
-import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 
 const Layout = () => {
 
@@ -15,8 +14,4 @@ const Layout = () => {
   );
 };
 
-// export default Layout;
-
-export default withAuthenticationRequired(Layout, {
-  onRedirecting: () => <Spinner />
-})
+export default Layout;
