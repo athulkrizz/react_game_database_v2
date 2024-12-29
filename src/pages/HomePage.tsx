@@ -27,8 +27,7 @@ const HomePage = () => {
       </Show>
       <GridItem area="main" boxShadow="var(--boxShadow)"
         marginTop={2}
-        borderRadius="20px"
-        marginLeft={5}
+        borderRadius="20px"       
         paddingLeft="10px"
       >
         <Box paddingLeft={2}>
